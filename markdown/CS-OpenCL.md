@@ -38,29 +38,9 @@ The short-term goal is providing an easy-to-use abstract layer which provides ac
 
 <https://sourceforge.net/projects/cloo/>
 
-## OpenCL 路难走啊
-
 # 矩阵乘法 使用`OpenCL`实现
 
 ## `OpenCL`使用基本过程
-
-1. Allocates memory for host buffers and initializes them.
-2. Gets platform and device information. This is discussed in detail in Chapter 2, OpenCL Architecture.
-3. Sets up the platform.
-4. Gets the devices list and chooses the type of device you want to run on.
-5. Creates an OpenCL context for the device.
-6. Creates a command queue.
-7. Creates memory buffers on the device for each vector.
-8. Copies the Buffer A and B to the device.
-9. Creates a program from the kernel source.
-10. Builds the program and creates the OpenCL kernel.
-11. Sets the arguments of the kernel.
-12. Executes the OpenCL kernel on the device.
-13. Reads back the memory from the device to the host buffer. This step is optional, you may want to keep the data resident in the device for further processing.
-14. Cleans up and waits for all the commands to complete.
-15. Finally rele
-
-## 实现过程
 
 1. Allocates memory for host buffers and initializes them.
 2. Gets platform and device information. This is discussed in detail in Chapter 2, OpenCL Architecture.
