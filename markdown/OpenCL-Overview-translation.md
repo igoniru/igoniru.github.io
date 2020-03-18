@@ -187,7 +187,7 @@ Alea gpu 是完全跨平台的。代码在一个平台上编译, 生成的程序
 
 与其他. net 库结合使用, 可以开发具有复杂用户界面或图形可视化的令人印象深刻的跨平台 gpu 加速应用程序。alea gpu 教程中的n 体模拟(图 2) 是一个示例, 它通过 OpenTK 使用 OpenGL 来显示模拟结果。它的代码库是100% 跨平台的。
 
-![tu](OpenCL-Overview-translation.png)
+![OpenCL-Overview-translation-md-t2](./OpenCL-Overview-translation-md-t2.png)
 >(图 2): N-Body Simulation
 
 OpenTk Overview
@@ -223,45 +223,45 @@ alea gpu 提供了一组丰富的设备端功能和高级 cuda 功能, 这些功
 
 Alea 未绑定：cub 并行算法 【？？？？】
 
->CUB介绍
->>CUB provides state-of-the-art, reusable software components for every layer of the CUDA programming model:
->>
->>- Parallel primitives
->>   - Warp-wide "collective" primitives
->>     - Cooperative warp-wide prefix scan, reduction, etc.
->>     - Safely specialized for each underlying CUDA architecture
->>   - Block-wide "collective" primitives
->>     - Cooperative I/O, sort, scan, reduction, histogram, etc.
->>     - Compatible with arbitrary thread block sizes and types
->>   - Device-wide primitives
->>     - Parallel sort, prefix scan, reduction, histogram, etc.
->>     - Compatible with CUDA dynamic parallelism
->>- Utilities
->>   - Fancy iterators
->>   - Thread and thread block I/O
->>   - PTX intrinsics
->>   - Device, kernel, and storage management
->>
->>cub 为 cuda 编程模型的每一层提供最先进的可重用软件组件:
->>
->>- 并行原语
->>   - 整个翘曲 "集体" 原语
->>     - 合作翘曲范围前缀扫描、减少等。
->>     - 安全地专门针对每个底层的 cuda 体系结构
->>   - 块范围的 "集体" 原语
->>     - 合作式 i/o、排序、扫描、还原、直方图等。
->>     - 与任意线程块大小和类型兼容
->>   - 设备范围的原语
->>     - 平行排序、前缀扫描、复位、直方图等。
->>     - 与 cuda 动态并行性兼容
->>- 实用工具
->>   - 复杂迭代器
->>   - 线程和线程块 I/O
->>   - ptx 内联函数
->>   - 设备、内核和存储管理
->
->【原语】： 操作系统或计算机网络用语范畴。是由若干条指令组成的，用于完成一定功能的一个过程。primitive or atomic action 是由若干个机器指令构成的完成某种特定功能的一段程序，具有不可分割性·即原语的执行必须是连续的，在执行过程中不允许被中断。
->
+      CUB介绍  
+      CUB provides state-of-the-art, reusable software components for every layer of the CUDA programming model:
+
+      - Parallel primitives
+         - Warp-wide "collective" primitives
+         - Cooperative warp-wide prefix scan, reduction, etc.
+         - Safely specialized for each underlying CUDA architecture
+         - Block-wide "collective" primitives
+         - Cooperative I/O, sort, scan, reduction, histogram, etc.
+         - Compatible with arbitrary thread block sizes and types
+         - Device-wide primitives
+         - Parallel sort, prefix scan, reduction, histogram, etc.
+         - Compatible with CUDA dynamic parallelism
+      - Utilities
+         - Fancy iterators
+         - Thread and thread block I/O
+         - PTX intrinsics
+         - Device, kernel, and storage management
+
+      cub 为 cuda 编程模型的每一层提供最先进的可重用软件组件:
+
+      - 并行原语
+         - 整个翘曲 "集体" 原语
+         - 合作翘曲范围前缀扫描、减少等。
+         - 安全地专门针对每个底层的 cuda 体系结构
+         - 块范围的 "集体" 原语
+         - 合作式 i/o、排序、扫描、还原、直方图等。
+         - 与任意线程块大小和类型兼容
+         - 设备范围的原语
+         - 平行排序、前缀扫描、复位、直方图等。
+         - 与 cuda 动态并行性兼容
+      - 实用工具
+         - 复杂迭代器
+         - 线程和线程块 I/O
+         - ptx 内联函数
+         - 设备、内核和存储管理
+
+      【原语】： 操作系统或计算机网络用语范畴。是由若干条指令组成的，用于完成一定功能的一个过程。primitive or atomic action 是由若干个机器指令构成的完成某种特定功能的一段程序，具有不可分割性·即原语的执行必须是连续的，在执行过程中不允许被中断。
+
 >Alea GPU is flexible enough to handle complex CUDA code found in some advanced CUDA C++ libraries. A good example is the CUB library of generic GPU parallel algorithm primitives. We have ported a subset of the CUB primitives to .NET using Alea GPU and made them available in Alea Unbound. Here is an example of how to use the device level sum scan primitive in C#:
 
 aleda gpu 具有足够的灵活性, 可以处理在一些高级 cuda c++ 库中找到的复杂的 cuda 代码。一个很好的例子是通用 gpu 并行算法基元的cub库。我们使用 alea gpu 将 cub 原语的子集移植到. net, 并使它们在alea 未绑定中可用。下面是如何在 c# 中使用设备级和扫描基元的示例:
