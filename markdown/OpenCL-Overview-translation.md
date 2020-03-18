@@ -261,9 +261,10 @@ Alea 未绑定：cub 并行算法 【？？？？】
          - ptx 内联函数
          - 设备、内核和存储管理
 
-      【原语】： 操作系统或计算机网络用语范畴。是由若干条指令组成的，用于完成一定功能的一个过程。
-      primitive or atomic action 是由若干个机器指令构成的完成某种特定功能的一段程序，
-      具有不可分割性·即原语的执行必须是连续的，在执行过程中不允许被中断。
+      【原语】： 操作系统或计算机网络用语范畴。是由若干条指令组成的，
+      用于完成一定功能的一个过程。primitive or atomic action 是
+      由若干个机器指令构成的完成某种特定功能的一段程序，具有不可分割性
+      ·即原语的执行必须是连续的，在执行过程中不允许被中断。
 
 >Alea GPU is flexible enough to handle complex CUDA code found in some advanced CUDA C++ libraries. A good example is the CUB library of generic GPU parallel algorithm primitives. We have ported a subset of the CUB primitives to .NET using Alea GPU and made them available in Alea Unbound. Here is an example of how to use the device level sum scan primitive in C#:
 
@@ -274,7 +275,8 @@ public static void DeviceScanInclusive()
 {
    const int numItems = 1000000;
    var rng = new Random(42);
-   var inputs = Enumerable.Range(0, numItems).Select(i => rng.Next(-10, 10)).ToArray();
+   var inputs = Enumerable.Range(0, numItems)
+                  .Select(i => rng.Next(-10, 10)).ToArray();
    var gpuScanModule = DeviceSumScanModuleI32.Default;
 
    using (var gpuScan = gpuScanModule.Create(numItems))
