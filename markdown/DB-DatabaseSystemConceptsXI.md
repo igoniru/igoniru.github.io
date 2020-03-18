@@ -8,7 +8,7 @@ tags: Database
 # 数据库系统概述 （第六版）思维导图版
 
 ## 目录
-* [第01章 引言](../mindmap/1..html)
+* [第01章 引言](../mindmap/1.html)
 ![引言png](../mindmap/1.png)
 * [第02章 关系模型](../mindmap/2.html)
 
